@@ -1,0 +1,58 @@
+.searchvideo {
+  margin-bottom: 5px;
+  display: flex;
+  padding: 0 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__media {
+    flex: 0 0 30%;
+    object-fit: contain;
+    padding: 0;
+  }
+  &__info {
+    flex: 0 0 70%;
+    padding: 10px 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  &__channel {
+    padding: 0 !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin: 0;
+    & > h3 {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+      margin-left: 10px;
+      text-transform: capitalize;
+    }
+  }
+
+  &__reviews {
+    display: flex;
+    margin: 10px 0px;
+    padding: 0;
+
+    & > h4 {
+      margin: 0;
+      font-size: 12px;
+      margin-right: 10px;
+      color: #333;
+    }
+  }
+  & .description {
+    margin: 0 !important;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+  }
+}

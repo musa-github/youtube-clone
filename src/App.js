@@ -1,57 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-
+import { Route, Switch } from "react-router";
+import "../node_modules/slick-carousel/slick/slick-theme.css";
+import "../node_modules/slick-carousel/slick/slick.css";
+import Aside from "./components/Aside";
+import Catagory from "./components/Catagory";
+import Layout from "./components/Layout";
+import Main from "./components/Main";
+import Navbar from "./components/Navbar";
+import Players from "./components/Players";
+import History from "./pages/History";
+import Home from "./pages/Home";
+import SearchPage from "./pages/SearchPage";
+import VideoPlayer from "./pages/VideoPlayer";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+   <Layout>
+      <Navbar />
+      <Aside />
+      <Main>
+        <Catagory/>
+        <Switch>
+          <Route path = "/history" exact component={History}/>
+         <Route path = "/" exact component={Home}/>
+         <Route path ="/searchpage" exact component={SearchPage}/>
+        <Route path="/videoplayer/:id" exact component={VideoPlayer}/>
+        <Route path="/players" exact component={Players}/>
+               </Switch>
+      </Main>
+
+   </Layout>
   );
 }
 

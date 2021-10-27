@@ -1,0 +1,120 @@
+.nav {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  border-top: 1px solid #c0c0c0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 899;
+  &__navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    // background-color: yellow;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
+    img {
+      width: 50px;
+    }
+    span {
+      position: absolute;
+      top: 15px;
+      right: 2px;
+      font-size: 10px;
+    }
+  }
+  &__menu {
+    font-size: 50px !important;
+    fill: #333 !important;
+  }
+
+  // logo section end
+
+  // searct section start
+  &__search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 800px;
+    input {
+      width: 100%;
+      border: 1px solid #c0c0c0;
+      background: transparent;
+      outline: 0;
+      &:focus {
+        border-color: rgb(7, 6, 77);
+      }
+      &::placeholder {
+        font-size: 15px;
+      }
+    }
+  }
+  &__searchIcon {
+    border: 1px solid #c0c0c0;
+    height: 38px !important;
+    padding: 0;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+    svg {
+      font-size: 30px !important;
+      fill: #333 !important;
+    }
+  }
+  &__mic {
+    border-radius: 60px;
+    height: 45px;
+    width: 50px;
+    padding: 0;
+    margin-left: 10px;
+    background-color: #c0c0c050;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      font-size: 30px !important;
+      fill: #333 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+  }
+  // nav notifications section start
+  &__notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg:hover {
+      cursor: pointer;
+    }
+  }
+  &__avatar {
+    padding: 0 !important;
+    width: 30px;
+    height: 30px;
+  }
+}

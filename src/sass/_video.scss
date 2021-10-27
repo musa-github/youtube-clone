@@ -1,0 +1,79 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-width: 200px;
+  width: 100%;
+  //   background-color: lightgray;
+  margin-bottom: 10px;
+  padding: 0 !important;
+  @media screen and (max-width: 768px) {
+    max-width: 250px;
+    width: 100%;
+  }
+  @media screen and (max-width: 570px) {
+    max-width: 400px !important;
+    width: 100%;
+  }
+
+  // video content design start
+  &__thumbnail {
+    position: relative;
+  }
+  &__duration {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-weight: 600;
+  }
+
+  &__media {
+    width: 100% !important;
+    margin-bottom: 0;
+  }
+  &__info {
+    display: flex;
+    padding: 10px;
+    margin: 0;
+    align-items: center;
+    color: #333;
+    & > h3 {
+      margin-left: 10px;
+      font-size: 15px;
+      text-transform: capitalize;
+      color: black;
+      margin-bottom: 0;
+    }
+    & .avatar {
+      width: 30px !important;
+      height: 30px !important;
+      padding: 0 !important;
+    }
+  }
+
+  &__channalName {
+    margin-left: 25%;
+    margin-bottom: 5px;
+    margin-top: -10px;
+    color: rgb(95, 91, 91);
+    font-size: 15px;
+  }
+  &__reviews {
+    margin-left: 25%;
+    display: flex;
+    & > h4 {
+      font-size: 15px;
+      color: rgb(95, 91, 91);
+      margin: 0px;
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

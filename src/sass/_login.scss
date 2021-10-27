@@ -1,0 +1,27 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  & > img {
+    width: 40px;
+    background: rgba(211, 211, 211, 0.432);
+    border-radius: 50px;
+    transition: all 0.5s;
+    padding: 10px;
+    &:hover {
+      cursor: pointer;
+      background: rgba(211, 211, 211, 1);
+    }
+  }
+}
+
+@media screen and(min-width:991px) {
+  .login {
+    display: flex;
+    justify-content: left !important;
+    align-items: center;
+    margin-left: 10px;
+  }
+}

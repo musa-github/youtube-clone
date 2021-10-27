@@ -1,0 +1,33 @@
+.catagory {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 10px 10px;
+  object-fit: contain;
+  position: sticky;
+  top: 0px;
+  right: 0;
+  background-color: white;
+  z-index: 899;
+
+  &__container {
+    padding: 0px 20px;
+  }
+  &__btn {
+    border-radius: 40px !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+    padding: 2px 10px !important;
+    background-color: $secondery-bgcolor !important;
+    &:hover {
+      background-color: #66606054 !important;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.hideCatagory {
+  display: none;
+}
